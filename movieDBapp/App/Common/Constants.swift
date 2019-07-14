@@ -10,6 +10,10 @@ import Foundation
 
 struct Constants{
     
+    struct TableViewCellIdentifiers{
+        static let PopularMoviesCel = "PopularMoviesCell"
+    }
+    
     
     struct BaseURL{
         static let moviesBaseUrl = "https://api.themoviedb.org/3/movie/"

@@ -26,12 +26,16 @@ class PopularMoviesViewController: BaseViewController, PopularMoviesViewProtocol
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter = PopularMoviesPresenter.init(view: self)
-        // Do any additional setup after loading the view.
+        configureViews()
     }
     
     private func configureViews(){
         tableView.dataSource = self
         tableView.delegate = self
+        let nib = UINib.init(nibName: PopularMoviesCell.nibName, bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: PopularMoviesCell.nibName)
+        self.tableView.separatorStyle = .none
+        self.tableView.rowHeight = 100
     }
     
     
@@ -42,11 +46,14 @@ class PopularMoviesViewController: BaseViewController, PopularMoviesViewProtocol
 extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return popularMoviesViewModel.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: PopularMoviesCell.nibName) as! PopularMoviesCell
+        
+        return cell
     }
     
 }

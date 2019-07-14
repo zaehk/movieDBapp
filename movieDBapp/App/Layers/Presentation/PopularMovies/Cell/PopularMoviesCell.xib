@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopularMoviesCell" rowHeight="100" id="KGk-i7-Jjw" customClass="PopularMoviesCell" customModule="movieDBapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V7-3S-Uid">
+                        <rect key="frame" x="5" y="5" width="339" height="89.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellTest2" translatesAutoresizingMaskIntoConstraints="NO" id="jec-N6-3Su" userLabel="cellImage">
+                                <rect key="frame" x="0.0" y="0.0" width="339" height="89.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jec-N6-3Su" secondAttribute="trailing" id="88g-ma-4bg"/>
+                            <constraint firstItem="jec-N6-3Su" firstAttribute="leading" secondItem="4V7-3S-Uid" secondAttribute="leading" id="AzK-6m-Wy2"/>
+                            <constraint firstItem="jec-N6-3Su" firstAttribute="top" secondItem="4V7-3S-Uid" secondAttribute="top" id="IU5-tf-R0X"/>
+                            <constraint firstAttribute="bottom" secondItem="jec-N6-3Su" secondAttribute="bottom" id="atB-m1-3ah"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hsi-un-yxi">
+                        <rect key="frame" x="309" y="51.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="VYQ-GE-NSQ"/>
+                            <constraint firstAttribute="width" secondItem="hsi-un-yxi" secondAttribute="height" multiplier="1:1" id="kX3-VK-RmH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers: Endgame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PIe-Rw-gc3">
+                        <rect key="frame" x="15" y="49" width="279" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="x9N-TB-7YI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="PIe-Rw-gc3" secondAttribute="bottom" constant="10" id="6hy-Fq-l2n"/>
+                    <constraint firstAttribute="trailing" secondItem="4V7-3S-Uid" secondAttribute="trailing" constant="5" id="7Gy-Gq-UW4"/>
+                    <constraint firstAttribute="bottom" secondItem="4V7-3S-Uid" secondAttribute="bottom" constant="5" id="Jjq-R4-EWZ"/>
+                    <constraint firstItem="4V7-3S-Uid" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="KWW-eG-6d1"/>
+                    <constraint firstItem="hsi-un-yxi" firstAttribute="centerY" secondItem="PIe-Rw-gc3" secondAttribute="centerY" id="R3D-JO-OnN"/>
+                    <constraint firstAttribute="trailing" secondItem="hsi-un-yxi" secondAttribute="trailing" constant="15" id="TAY-Fn-jA1"/>
+                    <constraint firstItem="hsi-un-yxi" firstAttribute="leading" secondItem="PIe-Rw-gc3" secondAttribute="trailing" constant="15" id="XHn-22-18I"/>
+                    <constraint firstItem="PIe-Rw-gc3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="kGO-Ib-Q3N"/>
+                    <constraint firstItem="4V7-3S-Uid" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="sS4-Pz-HHh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellImage" destination="jec-N6-3Su" id="VBb-QY-pRn"/>
+                <outlet property="imageGradientView" destination="4V7-3S-Uid" id="PdY-Nn-f3x"/>
+                <outlet property="scoreLabel" destination="hsi-un-yxi" id="ZrI-5G-Wct"/>
+            </connections>
+            <point key="canvasLocation" x="16.800000000000001" y="214.99250374812596"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cellTest2" width="500" height="281"/>
+    </resources>
+</document>
