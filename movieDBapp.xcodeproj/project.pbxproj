@@ -34,6 +34,7 @@
 		E7EB7B6122DB44940000E2AE /* PopularMoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B6022DB44940000E2AE /* PopularMoviesResponseModel.swift */; };
 		E7EB7B6322DB56AB0000E2AE /* PopularMoviesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B6222DB56AB0000E2AE /* PopularMoviesDomainModel.swift */; };
 		E7EB7B6522DB59480000E2AE /* MovieImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B6422DB59480000E2AE /* MovieImageHelper.swift */; };
+		E7EB7B6722DB86870000E2AE /* PopularMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B6622DB86870000E2AE /* PopularMoviesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		E7EB7B6022DB44940000E2AE /* PopularMoviesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesResponseModel.swift; sourceTree = "<group>"; };
 		E7EB7B6222DB56AB0000E2AE /* PopularMoviesDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesDomainModel.swift; sourceTree = "<group>"; };
 		E7EB7B6422DB59480000E2AE /* MovieImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageHelper.swift; sourceTree = "<group>"; };
+		E7EB7B6622DB86870000E2AE /* PopularMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewModel.swift; sourceTree = "<group>"; };
 		EF26ACBE68B890C7ED609606 /* Pods-movieDBapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDBapp.debug.xcconfig"; path = "Target Support Files/Pods-movieDBapp/Pods-movieDBapp.debug.xcconfig"; sourceTree = "<group>"; };
 		FA6F47323E051761574BD739 /* Pods-movieDBapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDBapp.release.xcconfig"; path = "Target Support Files/Pods-movieDBapp/Pods-movieDBapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,6 +268,7 @@
 		E7CB4AE822DB327D00512468 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E7EB7B6622DB86870000E2AE /* PopularMoviesViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				E7EB7B6122DB44940000E2AE /* PopularMoviesResponseModel.swift in Sources */,
 				E7EB7B4E22DB38660000E2AE /* DetailOfMovieDataController.swift in Sources */,
 				E7EB7B5F22DB3FDE0000E2AE /* DetailOfMoviePresenterProtocol.swift in Sources */,
+				E7EB7B6722DB86870000E2AE /* PopularMoviesViewModel.swift in Sources */,
 				E7EB7B5222DB38B50000E2AE /* DetailOfMovieDomainController.swift in Sources */,
 				E7CB4AC222DB24B900512468 /* ApiController.swift in Sources */,
 				E7E80B9C22DB1B31004FE499 /* AppDelegate.swift in Sources */,

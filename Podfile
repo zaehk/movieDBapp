@@ -9,5 +9,6 @@ target 'movieDBapp' do
 
 	pod 'Alamofire' , '4.8.2'
 	pod 'RealmSwift' , '3.17.1'
+  pod 'IQKeyboardManagerSwift', '6.2.0'
 
 end
