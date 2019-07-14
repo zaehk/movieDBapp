@@ -15,7 +15,23 @@ class PopularMoviesDomainController{
     
     init(presenter: PopularMoviesPresenterProtocol){
         self.presenter = presenter
+        getPopularMovies()
     }
     
+    func getPopularMovies(){
+        
+        data.getPopularMovies(success: { (movieListResponseModel) in
+
+            let domainModel = PopularMoviesDomainModel.init(movieListResponseModel: movieListResponseModel)
+
+            //save in realm
+            //return to presenter
+            
+            
+        }) { (dataError) in
+            //if api call fails look for local content
+        }
+        
+    }
     
 }

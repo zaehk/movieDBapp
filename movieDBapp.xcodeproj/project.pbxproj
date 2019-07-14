@@ -33,6 +33,8 @@
 		E7EB7B5D22DB3FD00000E2AE /* DetailOfMovieViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B5C22DB3FD00000E2AE /* DetailOfMovieViewProtocol.swift */; };
 		E7EB7B5F22DB3FDE0000E2AE /* DetailOfMoviePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B5E22DB3FDE0000E2AE /* DetailOfMoviePresenterProtocol.swift */; };
 		E7EB7B6122DB44940000E2AE /* PopularMoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B6022DB44940000E2AE /* PopularMoviesResponseModel.swift */; };
+		E7EB7B6322DB56AB0000E2AE /* PopularMoviesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B6222DB56AB0000E2AE /* PopularMoviesDomainModel.swift */; };
+		E7EB7B6522DB59480000E2AE /* MovieImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB7B6422DB59480000E2AE /* MovieImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		E7EB7B5C22DB3FD00000E2AE /* DetailOfMovieViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfMovieViewProtocol.swift; sourceTree = "<group>"; };
 		E7EB7B5E22DB3FDE0000E2AE /* DetailOfMoviePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfMoviePresenterProtocol.swift; sourceTree = "<group>"; };
 		E7EB7B6022DB44940000E2AE /* PopularMoviesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesResponseModel.swift; sourceTree = "<group>"; };
+		E7EB7B6222DB56AB0000E2AE /* PopularMoviesDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesDomainModel.swift; sourceTree = "<group>"; };
+		E7EB7B6422DB59480000E2AE /* MovieImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageHelper.swift; sourceTree = "<group>"; };
 		EF26ACBE68B890C7ED609606 /* Pods-movieDBapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDBapp.debug.xcconfig"; path = "Target Support Files/Pods-movieDBapp/Pods-movieDBapp.debug.xcconfig"; sourceTree = "<group>"; };
 		FA6F47323E051761574BD739 /* Pods-movieDBapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieDBapp.release.xcconfig"; path = "Target Support Files/Pods-movieDBapp/Pods-movieDBapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +134,7 @@
 			children = (
 				E7CB4AC622DB257A00512468 /* Constants.swift */,
 				E7CB4AC822DB27CF00512468 /* MovieAppError.swift */,
+				E7EB7B6422DB59480000E2AE /* MovieImageHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EB7B4622DB36850000E2AE /* PopularMoviesDomainController.swift */,
+				E7EB7B6222DB56AB0000E2AE /* PopularMoviesDomainModel.swift */,
 			);
 			path = PopularMovies;
 			sourceTree = "<group>";
@@ -452,6 +458,7 @@
 				E7CB4AC722DB257A00512468 /* Constants.swift in Sources */,
 				E7EB7B4522DB34F50000E2AE /* PopularMoviesPresenterProtocol.swift in Sources */,
 				E7E80B9E22DB1B31004FE499 /* ViewController.swift in Sources */,
+				E7EB7B6522DB59480000E2AE /* MovieImageHelper.swift in Sources */,
 				E7EB7B5B22DB3FC00000E2AE /* DetailOfMoviePresenter.swift in Sources */,
 				E7EB7B4722DB36850000E2AE /* PopularMoviesDomainController.swift in Sources */,
 				E7CB4AC422DB24E700512468 /* ApiRouter.swift in Sources */,
@@ -467,6 +474,7 @@
 				E7EB7B5222DB38B50000E2AE /* DetailOfMovieDomainController.swift in Sources */,
 				E7CB4AC222DB24B900512468 /* ApiController.swift in Sources */,
 				E7E80B9C22DB1B31004FE499 /* AppDelegate.swift in Sources */,
+				E7EB7B6322DB56AB0000E2AE /* PopularMoviesDomainModel.swift in Sources */,
 				E7CB4AE122DB316900512468 /* PopularMoviesViewController.swift in Sources */,
 				E7EB7B5D22DB3FD00000E2AE /* DetailOfMovieViewProtocol.swift in Sources */,
 			);

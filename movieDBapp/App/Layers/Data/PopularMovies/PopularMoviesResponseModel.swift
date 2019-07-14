@@ -15,18 +15,18 @@ struct PopularMoviesResponseModel : Decodable {
 
 // MARK: - Result
 struct MovieListInfo : Decodable {
-    let voteCount, id: Int?
-    let video: Bool?
-    let voteAverage: Double?
-    let title: String?
-    let popularity: Double?
-    let posterPath: String?
-    let originalLanguage: String?
-    let originalTitle: String?
-    let genreIDS: [Int]?
-    let backdropPath: String?
-    let adult: Bool?
-    let overview, releaseDate: String?
+    let vote_count, id: Int
+    let video: Bool
+    let vote_average: Double
+    let title: String
+    let popularity: Double
+    let poster_path: String
+    let original_language: String
+    let original_title: String
+    let genre_ids: [Int]
+    let backdrop_path: String
+    let adult: Bool
+    let overview, release_date: String
 }
 
 
