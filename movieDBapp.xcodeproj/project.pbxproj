@@ -12,6 +12,7 @@
 		E7CB4AC422DB24E700512468 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4AC322DB24E700512468 /* ApiRouter.swift */; };
 		E7CB4AC722DB257A00512468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4AC622DB257A00512468 /* Constants.swift */; };
 		E7CB4AC922DB27CF00512468 /* MovieAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4AC822DB27CF00512468 /* MovieAppError.swift */; };
+		E7CB4ACB22DB29E700512468 /* ApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4ACA22DB29E700512468 /* ApiParams.swift */; };
 		E7E80B9C22DB1B31004FE499 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E80B9B22DB1B31004FE499 /* AppDelegate.swift */; };
 		E7E80B9E22DB1B31004FE499 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E80B9D22DB1B31004FE499 /* ViewController.swift */; };
 		E7E80BA122DB1B31004FE499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7E80B9F22DB1B31004FE499 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		E7CB4AC322DB24E700512468 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		E7CB4AC622DB257A00512468 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7CB4AC822DB27CF00512468 /* MovieAppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppError.swift; sourceTree = "<group>"; };
+		E7CB4ACA22DB29E700512468 /* ApiParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParams.swift; sourceTree = "<group>"; };
 		E7E80B9822DB1B31004FE499 /* movieDBapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieDBapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E80B9B22DB1B31004FE499 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7E80B9D22DB1B31004FE499 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,15 +59,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E7CB4ABC22DB1F1E00512468 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				E7CB4ABE22DB1F2C00512468 /* App */,
-				E7CB4ABD22DB1F2200512468 /* Architecture */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		E7CB4ABD22DB1F2200512468 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +88,7 @@
 			children = (
 				E7CB4AC122DB24B900512468 /* ApiController.swift */,
 				E7CB4AC322DB24E700512468 /* ApiRouter.swift */,
+				E7CB4ACA22DB29E700512468 /* ApiParams.swift */,
 			);
 			path = CommunicationApi;
 			sourceTree = "<group>";
@@ -129,7 +123,8 @@
 		E7E80B9A22DB1B31004FE499 /* movieDBapp */ = {
 			isa = PBXGroup;
 			children = (
-				E7CB4ABC22DB1F1E00512468 /* New Group */,
+				E7CB4ABE22DB1F2C00512468 /* App */,
+				E7CB4ABD22DB1F2200512468 /* Architecture */,
 				E7E80B9B22DB1B31004FE499 /* AppDelegate.swift */,
 				E7E80B9D22DB1B31004FE499 /* ViewController.swift */,
 				E7E80B9F22DB1B31004FE499 /* Main.storyboard */,
@@ -263,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CB4ACB22DB29E700512468 /* ApiParams.swift in Sources */,
 				E7CB4AC722DB257A00512468 /* Constants.swift in Sources */,
 				E7E80B9E22DB1B31004FE499 /* ViewController.swift in Sources */,
 				E7CB4AC422DB24E700512468 /* ApiRouter.swift in Sources */,

@@ -42,13 +42,10 @@ enum ApiRouter : APIConfiguration{
         }
     }
     
+    //Parameters
     var parameters: Parameters?{
-        switch self{
-        case .getPopularMovies:
-            return nil
-        case .getMovieDetails:
-            return nil
-        }
+        //for the moment we only set the apiKey in order to retrieve the info, but in the future we could add more parameters to filter, so we could do a switch in order to personalize them by Api call
+            return [ApiParams.ApiKey.apiKey : ApiParams.ApiKey.keyValue]
     }
     
     
@@ -65,6 +62,8 @@ enum ApiRouter : APIConfiguration{
         
         //Set method
         urlRequest.httpMethod = method.rawValue
+        
+        
         
         //Set max timeout time
         urlRequest.timeoutInterval = Constants.ApiConfig.timeoutInterval
