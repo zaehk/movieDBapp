@@ -8,10 +8,7 @@
 
 import Foundation
 
-struct PopularMoviesViewModel{
-    let offline : Bool
-    let movies : [MovieViewModel]
-}
+typealias PopularMoviesViewModel = [MovieViewModel]
 
 struct MovieViewModel{
     let id: Int

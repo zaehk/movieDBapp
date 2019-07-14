@@ -14,6 +14,13 @@ class PopularMoviesViewController: BaseViewController, PopularMoviesViewProtocol
     @IBOutlet weak var tableView: UITableView!
     
     
+    
+    private var popularMoviesViewModel : PopularMoviesViewModel = []{
+        didSet{
+            self.tableView.reloadData()
+        }
+    }
+    
     private var presenter : PopularMoviesPresenter?
     
     override func viewDidLoad() {
@@ -31,10 +38,11 @@ class PopularMoviesViewController: BaseViewController, PopularMoviesViewProtocol
     
 }
 
+//MARK: - TableView setup
 extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return popularMoviesViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
