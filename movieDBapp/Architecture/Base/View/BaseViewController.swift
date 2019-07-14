@@ -22,7 +22,17 @@ class BaseViewController : UIViewController, BaseViewProtocol{
     
     func showError(error: MovieAppError) {
         
-    } 
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
 }
 
