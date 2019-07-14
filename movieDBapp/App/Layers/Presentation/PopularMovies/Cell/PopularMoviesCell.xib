@@ -34,18 +34,18 @@
                             <constraint firstAttribute="bottom" secondItem="jec-N6-3Su" secondAttribute="bottom" id="atB-m1-3ah"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hsi-un-yxi">
-                        <rect key="frame" x="309" y="51.5" width="25" height="25"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hsi-un-yxi">
+                        <rect key="frame" x="307" y="50.5" width="27" height="27"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="VYQ-GE-NSQ"/>
+                            <constraint firstAttribute="height" constant="27" id="VYQ-GE-NSQ"/>
                             <constraint firstAttribute="width" secondItem="hsi-un-yxi" secondAttribute="height" multiplier="1:1" id="kX3-VK-RmH"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers: Endgame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PIe-Rw-gc3">
-                        <rect key="frame" x="15" y="49" width="279" height="30"/>
+                        <rect key="frame" x="15" y="49" width="277" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="x9N-TB-7YI"/>
                         </constraints>
