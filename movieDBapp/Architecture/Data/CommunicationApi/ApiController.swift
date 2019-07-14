@@ -22,6 +22,8 @@ class ApiController{
     }()
     
     
+    
+    
     static func makeApiRequest<T:Decodable>(route: ApiRouter, responseModel: T.Type, success: @escaping(T)->Void, failed: @escaping(MovieAppError)->Void){
         
         AFManager.request(route).validate(statusCode: 200..<300).responseData { (response) in
@@ -45,4 +47,6 @@ class ApiController{
             }
         }
     }
+    
+    
 }

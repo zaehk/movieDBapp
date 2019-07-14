@@ -10,4 +10,12 @@ import Foundation
 
 class PopularMoviesDataController{
     
+    
+    func getPopularMovies(success: @escaping(PopularMoviesResponseModel)->Void, failed: @escaping(MovieAppError)->Void){
+        ApiController.makeApiRequest(route: ApiRouter.getPopularMovies(), responseModel: PopularMoviesResponseModel.self, success: { (popularMoviesRM) in
+            success(popularMoviesRM)
+        }) { (movieError) in
+            failed(movieError)
+        }
+    }
 }

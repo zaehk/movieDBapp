@@ -53,17 +53,16 @@ enum ApiRouter : APIConfiguration{
         
         var urlRequest : URLRequest
         
-        switch self{
-            
-        case .getPopularMovies, .getMovieDetails:
-            let url = try Constants.BaseURL.moviesBaseUrl.asURL()
-            urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        }
+        let url = try Constants.BaseURL.moviesBaseUrl.asURL()
+        
+        //Create urlRequest
+        urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
         //Set method
         urlRequest.httpMethod = method.rawValue
         
-        
+        //Set parameters
+        urlRequest = try Alamofire.URLEncoding.methodDependent.encode(urlRequest, with: self.parameters)
         
         //Set max timeout time
         urlRequest.timeoutInterval = Constants.ApiConfig.timeoutInterval
@@ -73,6 +72,7 @@ enum ApiRouter : APIConfiguration{
         
         
         urlRequest.timeoutInterval = Constants.ApiConfig.timeoutInterval
+        
         
         return urlRequest
     }
