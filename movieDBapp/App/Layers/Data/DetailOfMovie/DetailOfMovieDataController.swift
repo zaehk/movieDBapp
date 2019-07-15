@@ -10,9 +10,9 @@ import Foundation
 
 class DetailOfMovieDataController{
     
-    private func getVideoSources(movieId: String, success: @escaping(DetailOfMovieResponseModel)->Void, failed: @escaping(MovieAppError)->Void){
-        ApiController.makeApiRequest(route: ApiRouter.getMovieDetails(movieId: movieId), responseModel: DetailOfMovieResponseModel.self, success: { (detailOfMovieRM) in
-            success(detailOfMovieRM)
+    func getVideoSources(movieId: String, success: @escaping(VideoSourcesResponseModel)->Void, failed: @escaping(MovieAppError)->Void){
+        ApiController.makeApiRequest(route: ApiRouter.getMovieTrailers(movieId: movieId), responseModel: VideoSourcesResponseModel.self, success: { (videoSourcesRM) in
+            success(videoSourcesRM)
         }) { (movieError) in
             failed(movieError)
         }

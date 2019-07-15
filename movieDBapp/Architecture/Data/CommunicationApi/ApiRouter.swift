@@ -20,14 +20,13 @@ enum ApiRouter : APIConfiguration{
     //services
     case getPopularMovies()
     case getMovieDetails(movieId : String)
+    case getMovieTrailers(movieId : String)
     
     
     //HTTPMethods
     var method: HTTPMethod{
         switch self{
-        case .getPopularMovies:
-            return HTTPMethod.get
-        case .getMovieDetails:
+        case .getPopularMovies,.getMovieTrailers,.getMovieDetails:
             return HTTPMethod.get
         }
     }
@@ -39,6 +38,8 @@ enum ApiRouter : APIConfiguration{
             return Constants.Endpoints.popularMovies
         case .getMovieDetails(let movieId):
             return movieId
+        case .getMovieTrailers(let movieId):
+            return movieId + Constants.Endpoints.trailers
         }
     }
     

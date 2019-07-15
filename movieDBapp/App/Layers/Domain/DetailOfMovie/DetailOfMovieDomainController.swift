@@ -11,8 +11,19 @@ import Foundation
 class DetailOfMovieDomainController{
     
     private var presenter : DetailOfMoviePresenterProtocol?
+        private var data = DetailOfMovieDataController()
     
     init(presenter: DetailOfMoviePresenterProtocol){
         self.presenter = presenter
+    }
+    
+    func getTrailersForMovie(movieId: String, success: @escaping()->Void, failed: @escaping()->Void){
+        
+        data.getVideoSources(movieId: "550", success: { (videoSourcesRM) in
+            
+        }) { (movieError) in
+            //upload error
+        }
+        
     }
 }

@@ -26,6 +26,7 @@ struct Constants{
     
     struct Endpoints{
         static let popularMovies = "popular"
+        static let trailers = "/videos"
     }
     
     struct ApiConfig{
