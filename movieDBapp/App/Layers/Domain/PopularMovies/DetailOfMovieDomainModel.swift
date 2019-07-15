@@ -17,6 +17,7 @@ struct DetailsOfMoviesDomainModel{
 }
 
 struct DetailOfMovieDomainModel{
+    let id : String
     let title : String
     let genres : [Genre]
     let overview : String
@@ -25,7 +26,8 @@ struct DetailOfMovieDomainModel{
     let releaseDate : String
     let runtime : Int
     
-    init(detailRM: DetailOfMovieResponseModel){
+    init(detailRM: DetailOfMovieResponseModel, id: String){
+        self.id = id
         self.title = detailRM.title ?? ""
         self.genres = detailRM.genres ?? []
         self.overview = detailRM.overview ?? ""

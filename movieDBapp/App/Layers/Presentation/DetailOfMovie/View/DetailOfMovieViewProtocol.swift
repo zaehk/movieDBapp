@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DetailOfMovieViewProtocol : BaseViewProtocol{
-    
+    func enableTrailerButton(movieKey: String)
 }

@@ -10,13 +10,15 @@ import Foundation
 
 struct VideoSourcesDomainModel{
     
-    let videoKeys : [String] = []
-    
+    var videoKeys : [String] = []
     
     init(videoSourcesRM: VideoSourcesResponseModel){
+        
         for video in videoSourcesRM.results{
-            if video.site == "YouTube"
+            if (video.site == "YouTube"){
             videoKeys.append(video.key)
+            }
         }
+        
     }
 }

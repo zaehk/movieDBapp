@@ -11,6 +11,7 @@ import Foundation
 typealias MoviesDetailsViewModel = [MovieDetailViewModel]
 
 struct MovieDetailViewModel{
+    let id : String
     let title : String
     var genres : [String] = []
     let overview : String
@@ -19,15 +20,16 @@ struct MovieDetailViewModel{
     let releaseDate : String
     let runtime : String
     
-    init(movieDetailVM: DetailOfMovieDomainModel) {
-        self.title = movieDetailVM.title
-        for genre in movieDetailVM.genres{
+    init(movieDetailDM: DetailOfMovieDomainModel) {
+        self.id = movieDetailDM.id
+        self.title = movieDetailDM.title
+        for genre in movieDetailDM.genres{
             self.genres.append(genre.name)
         }
-        self.overview = movieDetailVM.overview
-        self.posterURL = movieDetailVM.posterURL
-        self.backDropPathURL = movieDetailVM.backDropPathURL
-        self.releaseDate = movieDetailVM.releaseDate
-        self.runtime = String(movieDetailVM.runtime) + "min"
+        self.overview = movieDetailDM.overview
+        self.posterURL = movieDetailDM.posterURL
+        self.backDropPathURL = movieDetailDM.backDropPathURL
+        self.releaseDate = movieDetailDM.releaseDate
+        self.runtime = String(movieDetailDM.runtime) + "min"
     }
 }

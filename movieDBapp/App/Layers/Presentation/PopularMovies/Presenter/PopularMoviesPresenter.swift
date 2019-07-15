@@ -30,7 +30,7 @@ class PopularMoviesPresenter : PopularMoviesPresenterProtocol{
             listViewModel.append(MovieViewModel.init(popularMoviesDomainModel: model))
         }
         for detail in detailsDomainModel.detailOfMovies{
-            detailsViewModel.append(MovieDetailViewModel.init(movieDetailVM: detail))
+            detailsViewModel.append(MovieDetailViewModel.init(movieDetailDM: detail))
         }
         
         returnVMtoView(listViewModel: listViewModel, detailViewModel: detailsViewModel)

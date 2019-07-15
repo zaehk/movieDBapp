@@ -27,7 +27,7 @@ class PopularMoviesDomainController{
             
             for movieInfo in listWithDetail{
                movieListDomainModel.movies.append(MovieDomainModel.init(movieListInfoRM: movieInfo.movieListInfo))
-               moviesDetailsDomainModel.detailOfMovies.append(DetailOfMovieDomainModel.init(detailRM: movieInfo.movieDetailInfo))
+                moviesDetailsDomainModel.detailOfMovies.append(DetailOfMovieDomainModel.init(detailRM: movieInfo.movieDetailInfo, id: String(movieInfo.movieListInfo.id)))
             }
             
             self.presenter.toViewModel(listDomainModel: movieListDomainModel, detailsDomainModel: moviesDetailsDomainModel)

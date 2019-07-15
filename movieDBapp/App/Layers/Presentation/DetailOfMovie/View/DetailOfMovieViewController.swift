@@ -9,6 +9,12 @@
 import UIKit
 
 class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol {
+    
+    func enableTrailerButton(movieKey: String) {
+        trailerButton.isEnabled = true
+        trailerButton.backgroundColor = UIColor.red
+        trailerKey = movieKey
+    }
 
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var genresLabel: UILabel!
@@ -21,6 +27,7 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
     var detailOfMovieViewModel : MovieDetailViewModel? = nil
     var landscapeModeImage : UIImage? = nil
     var verticalModeImage : UIImage? = nil
+    var trailerKey : String? = nil
 
     private var presenter : DetailOfMoviePresenter?
     private var gradientLayer : CAGradientLayer = CAGradientLayer()
@@ -57,12 +64,15 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
             self.landscapeModeImage = poster
             self.updateImageByOrientation()
         }
+        presenter?.getVideosForMovie(movieId: vm.id)
     }
     
     @IBAction func openTrailer(_ sender: Any) {
-        let youtubeVC = YoutubePlayerViewController()
-        self.present(youtubeVC, animated: true) {
-            
+        if let key = self.trailerKey{
+            let youtubeVC = YoutubePlayerViewController()
+            youtubeVC.videoKey = key
+            navigationController?.pushViewController(youtubeVC, animated: true)
+          //  self.present(youtubeVC, animated: true)
         }
     }
     

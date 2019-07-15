@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DetailOfMoviePresenterProtocol{
-    func manageDownloadedTrailers()
+    func manageDownloadedTrailers(videoSourcesDM: VideoSourcesDomainModel)
 }

@@ -17,13 +17,14 @@ class DetailOfMovieDomainController{
         self.presenter = presenter
     }
     
-    func getTrailersForMovie(movieId: String, success: @escaping()->Void, failed: @escaping()->Void){
+    func getTrailersForMovie(movieId: String){
         
         data.getVideoSources(movieId: movieId, success: { (videoSourcesRM) in
             let domainModel = VideoSourcesDomainModel.init(videoSourcesRM: videoSourcesRM)
-            
+            self.presenter?.manageDownloadedTrailers(videoSourcesDM: domainModel)
         }) { (movieError) in
             //upload error
+            //disable button
         }
         
     }
