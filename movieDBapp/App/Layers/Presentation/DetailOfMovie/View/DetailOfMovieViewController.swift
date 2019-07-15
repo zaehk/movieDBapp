@@ -70,6 +70,7 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
             self.landscapeModeImage = poster
             self.updateImageByOrientation()
         }
+        disableTrailerButton()
         presenter?.getVideosForMovie(movieId: vm.id)
     }
     
