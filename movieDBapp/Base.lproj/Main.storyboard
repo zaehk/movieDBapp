@@ -132,6 +132,9 @@
                                 <state key="normal" title="Watch Trailer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="openTrailer:" destination="GY5-u1-xPG" eventType="touchUpInside" id="0SO-EC-Z1X"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz2-yz-Cg6">
                                 <rect key="frame" x="15" y="239.5" width="345" height="20.5"/>

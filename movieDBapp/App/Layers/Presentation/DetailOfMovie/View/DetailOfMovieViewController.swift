@@ -57,9 +57,15 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
             self.landscapeModeImage = poster
             self.updateImageByOrientation()
         }
-        
-        
     }
+    
+    @IBAction func openTrailer(_ sender: Any) {
+        let youtubeVC = YoutubePlayerViewController()
+        self.present(youtubeVC, animated: true) {
+            
+        }
+    }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

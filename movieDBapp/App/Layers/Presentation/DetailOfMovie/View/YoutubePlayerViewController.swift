@@ -13,12 +13,35 @@ import YoutubePlayerView
 class YoutubePlayerViewController: UIViewController {
 
     @IBOutlet weak var youtubePlayer: YoutubePlayerView!
+    var videoKey : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureViews()
         // Do any additional setup after loading the view.
     }
+    
+    private func configureViews(){
+        youtubePlayer.delegate = self
+        if let videoId = self.videoKey{
+            youtubePlayer.loadWithVideoId(videoId)
+        }
+    }
 
+}
 
+extension YoutubePlayerViewController : YoutubePlayerViewDelegate{
+    
+    
+    //when video ends it dismiss the VC
+    func playerView(_ playerView: YoutubePlayerView, didChangedToState state: YoutubePlayerState) {
+        if state == .ended{
+            self.dismiss(animated: true)
+        }
+    }
+    
+    //when video is ready it starts automatically
+    func playerViewDidBecomeReady(_ playerView: YoutubePlayerView) {
+        playerView.play()
+    }
 }
