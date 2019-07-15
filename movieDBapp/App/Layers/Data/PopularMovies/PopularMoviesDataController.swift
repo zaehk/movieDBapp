@@ -18,4 +18,12 @@ class PopularMoviesDataController{
             failed(movieError)
         }
     }
+    
+    func getDetailOfMovie(movieId: String, success: @escaping(DetailOfMovieResponseModel)->Void, failed: @escaping(MovieAppError)->Void){
+        ApiController.makeApiRequest(route: ApiRouter.getMovieDetails(movieId: movieId), responseModel: DetailOfMovieResponseModel.self, success: { (detailOfMovieRM) in
+            success(detailOfMovieRM)
+        }) { (movieError) in
+            failed(movieError)
+        }
+    }
 }

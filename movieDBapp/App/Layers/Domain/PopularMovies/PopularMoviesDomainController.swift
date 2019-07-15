@@ -31,6 +31,9 @@ class PopularMoviesDomainController{
         }) { (dataError) in
             //if api call fails look for local content
         }
+    }
+    
+    func getMovieDetailInfo(){
         
     }
     
