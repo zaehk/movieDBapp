@@ -49,10 +49,10 @@ class PopularMoviesViewController: BaseViewController {
 extension PopularMoviesViewController : PopularMoviesViewProtocol{
     
     func showMovieList(productListVM: PopularMoviesViewModel) {
+        hideSpinner()
         self.popularMoviesViewModel = []
         self.popularMoviesViewModel = productListVM
     }
-    
     
 }
 
@@ -63,10 +63,8 @@ extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: PopularMoviesCell.nibName) as! PopularMoviesCell
         cell.setup(movieInfo: popularMoviesViewModel[indexPath.row])
-        
         return cell
     }
 }

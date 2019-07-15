@@ -21,6 +21,7 @@ class BaseViewController : UIViewController, BaseViewProtocol{
     }
     
     func showError(error: MovieAppError) {
+        hideSpinner()
         
     }
     
