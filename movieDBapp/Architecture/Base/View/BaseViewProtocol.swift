@@ -11,5 +11,5 @@ import Foundation
 protocol BaseViewProtocol{
     func showSpinner()
     func hideSpinner()
-    func showError(error: MovieAppError)
+    func showInfoError(error: MovieAppError)
 }

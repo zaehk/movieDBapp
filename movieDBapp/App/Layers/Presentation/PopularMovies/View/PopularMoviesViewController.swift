@@ -40,9 +40,12 @@ class PopularMoviesViewController: BaseViewController {
         self.tableView.register(nib, forCellReuseIdentifier: PopularMoviesCell.nibName)
         self.tableView.separatorStyle = .none
         self.tableView.rowHeight = 100
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(self.getMovieList)
+        )
+        navigationItem.rightBarButtonItem = refreshButton
     }
     
-    private func getMovieList(){
+    @objc private func getMovieList(){
         showSpinner()
         presenter?.getPopularMovieList()
     }

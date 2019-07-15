@@ -20,9 +20,12 @@ class BaseViewController : UIViewController, BaseViewProtocol{
         
     }
     
-    func showError(error: MovieAppError) {
+    func showInfoError(error: MovieAppError) {
         hideSpinner()
-        
+        let alert = UIAlertController(title: "There was a problem", message: error.errorDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+        }))
+        self.present(alert, animated: true)
     }
     
     override func viewDidLoad() {
