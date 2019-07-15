@@ -28,11 +28,12 @@ class PopularMoviesViewController: BaseViewController {
         super.viewDidLoad()
         self.presenter = PopularMoviesPresenter.init(view: self)
         configureViews()
+        getMovieList()
     }
     
     private func configureViews(){
-        tableView.dataSource = self
         tableView.delegate = self
+        tableView.dataSource = self
         let nib = UINib.init(nibName: PopularMoviesCell.nibName, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: PopularMoviesCell.nibName)
         self.tableView.separatorStyle = .none
@@ -41,6 +42,16 @@ class PopularMoviesViewController: BaseViewController {
     
     private func getMovieList(){
         showSpinner()
+        presenter?.getPopularMovieList()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segues.detailOfMovieSegue {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! DetailOfMovieViewController
+                //pass detail view model
+            }
+        }
     }
     
 }
@@ -66,6 +77,10 @@ extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: PopularMoviesCell.nibName) as! PopularMoviesCell
         cell.setup(movieInfo: popularMoviesViewModel[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.Segues.detailOfMovieSegue, sender: nil)
     }
 }
 

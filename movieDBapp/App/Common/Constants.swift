@@ -14,6 +14,9 @@ struct Constants{
         static let PopularMoviesCel = "PopularMoviesCell"
     }
     
+    struct Segues{
+        static let detailOfMovieSegue = "detailOfMovieSegue"
+    }
     
     struct BaseURL{
         static let moviesBaseUrl = "https://api.themoviedb.org/3/movie/"

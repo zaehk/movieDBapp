@@ -15,7 +15,6 @@ class PopularMoviesDomainController{
     
     init(presenter: PopularMoviesPresenterProtocol){
         self.presenter = presenter
-        getPopularMovies()
     }
     
     func getPopularMovies(){

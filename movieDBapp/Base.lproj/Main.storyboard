@@ -43,7 +43,7 @@
                     <connections>
                         <outlet property="searchBar" destination="isk-sj-tUK" id="OBR-zY-2gX"/>
                         <outlet property="tableView" destination="T9G-0J-8F1" id="ZuQ-bW-ZjH"/>
-                        <segue destination="GY5-u1-xPG" kind="show" id="Mox-LO-5SB"/>
+                        <segue destination="GY5-u1-xPG" kind="show" identifier="detailOfMovieSegue" id="Mox-LO-5SB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,7 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZB2-z6-ad7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZB2-z6-ad7">
                                 <rect key="frame" x="0.0" y="32" width="240" height="358"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZB2-z6-ad7" secondAttribute="height" multiplier="16:9" id="JGc-Df-0S6"/>
@@ -124,10 +124,14 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeL-8l-NA1">
                                 <rect key="frame" x="255" y="47" width="397" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WwG-SH-n8i"/>
                                 </constraints>
-                                <state key="normal" title="Watch Trailer"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Watch Trailer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,6 +169,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="m6j-su-GjE" id="FG2-BA-CcG"/>
+                        <outlet property="genresLabel" destination="i8G-D9-mfc" id="LZ4-qy-ejc"/>
+                        <outlet property="overviewTextView" destination="zEa-oT-THM" id="JWd-yt-2QB"/>
+                        <outlet property="posterImageView" destination="ZB2-z6-ad7" id="8ei-d7-Bhv"/>
+                        <outlet property="trailerButton" destination="qeL-8l-NA1" id="P4r-zW-aJh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEZ-4R-uhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +187,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FtT-2g-b1c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LC1-oY-noS">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
