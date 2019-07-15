@@ -23,8 +23,7 @@ class DetailOfMovieDomainController{
             let domainModel = VideoSourcesDomainModel.init(videoSourcesRM: videoSourcesRM)
             self.presenter?.manageDownloadedTrailers(videoSourcesDM: domainModel)
         }) { (movieError) in
-            //upload error
-            //disable button
+            self.presenter?.manageVideoSourcesError()
         }
         
     }

@@ -37,7 +37,7 @@ extension YoutubePlayerViewController : YoutubePlayerViewDelegate{
     //when video ends it dismiss the VC
     func playerView(_ playerView: YoutubePlayerView, didChangedToState state: YoutubePlayerState) {
         if state == .ended{
-            self.dismiss(animated: true)
+            navigationController?.popViewController(animated: true)
         }
     }
     

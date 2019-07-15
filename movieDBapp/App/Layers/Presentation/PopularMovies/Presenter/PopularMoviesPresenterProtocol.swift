@@ -10,4 +10,5 @@ import Foundation
 
 protocol PopularMoviesPresenterProtocol{
     func toViewModel(listDomainModel: PopularMoviesDomainModel, detailsDomainModel: DetailsOfMoviesDomainModel)
+    func manageError(error: MovieAppError)
 }

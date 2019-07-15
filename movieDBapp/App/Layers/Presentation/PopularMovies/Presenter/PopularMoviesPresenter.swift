@@ -10,9 +10,6 @@ import Foundation
 
 class PopularMoviesPresenter : PopularMoviesPresenterProtocol{
 
-
-    
-
     private var view : PopularMoviesViewProtocol
     private var domain : PopularMoviesDomainController?
     
@@ -42,6 +39,10 @@ class PopularMoviesPresenter : PopularMoviesPresenterProtocol{
     
     func getPopularMovieList(){
         domain?.getPopularMoviesWithDetail()
+    }
+    
+    func manageError(error: MovieAppError) {
+        view.showInfoError(error: error)
     }
 
 }

@@ -10,9 +10,12 @@ import Foundation
 
 class DetailOfMoviePresenter : DetailOfMoviePresenterProtocol{
     
+    
     func manageDownloadedTrailers(videoSourcesDM: VideoSourcesDomainModel) {
         if let trailerKey = videoSourcesDM.videoKeys.first{
             view.enableTrailerButton(movieKey: trailerKey)
+        }else{
+            view.disableTrailerButton()
         }
     }
     
@@ -28,5 +31,8 @@ class DetailOfMoviePresenter : DetailOfMoviePresenterProtocol{
         domain?.getTrailersForMovie(movieId: movieId)
     }
     
+    func manageVideoSourcesError() {
+        view.disableTrailerButton()
+    }
     
 }

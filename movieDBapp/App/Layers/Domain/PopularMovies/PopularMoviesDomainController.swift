@@ -33,10 +33,7 @@ class PopularMoviesDomainController{
             self.presenter.toViewModel(listDomainModel: movieListDomainModel, detailsDomainModel: moviesDetailsDomainModel)
 
         }) { (movieError) in
-            
-            //CHECK FOR REALM LOCAL DATA
-            
-            //IF NOT, SHOW ERROR
+            self.presenter.manageError(error: movieError)
         }
     }
 }

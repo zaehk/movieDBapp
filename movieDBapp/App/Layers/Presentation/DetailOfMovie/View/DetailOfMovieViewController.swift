@@ -15,6 +15,12 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
         trailerButton.backgroundColor = UIColor.red
         trailerKey = movieKey
     }
+    
+    func disableTrailerButton() {
+        trailerButton.isEnabled = false
+        trailerButton.backgroundColor = UIColor.lightGray
+    }
+    
 
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var genresLabel: UILabel!
