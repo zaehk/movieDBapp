@@ -19,29 +19,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T9G-0J-8F1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="isk-sj-tUK">
-                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="isk-sj-tUK" firstAttribute="top" secondItem="T9G-0J-8F1" secondAttribute="bottom" id="6w4-Zg-yTo"/>
-                            <constraint firstItem="isk-sj-tUK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Ds-KT-piG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T9G-0J-8F1" secondAttribute="trailing" id="Gwk-1V-Kn0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="isk-sj-tUK" secondAttribute="bottom" id="Iwl-1N-CxE"/>
                             <constraint firstItem="T9G-0J-8F1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UGK-bp-VYU"/>
                             <constraint firstItem="T9G-0J-8F1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dAU-kH-fpu"/>
-                            <constraint firstItem="isk-sj-tUK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="huL-Is-1tr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T9G-0J-8F1" secondAttribute="bottom" id="eW2-qY-QEF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Popular Movies" id="3bc-fT-A3b"/>
                     <connections>
-                        <outlet property="searchBar" destination="isk-sj-tUK" id="OBR-zY-2gX"/>
                         <outlet property="tableView" destination="T9G-0J-8F1" id="ZuQ-bW-ZjH"/>
                         <segue destination="GY5-u1-xPG" kind="show" identifier="detailOfMovieSegue" id="Mox-LO-5SB"/>
                     </connections>

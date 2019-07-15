@@ -12,6 +12,7 @@ class DetailOfMoviePresenter : DetailOfMoviePresenterProtocol{
     
     
     func manageDownloadedTrailers(videoSourcesDM: VideoSourcesDomainModel) {
+        view.hideSpinner()
         if let trailerKey = videoSourcesDM.videoKeys.first{
             view.enableTrailerButton(movieKey: trailerKey)
         }else{
@@ -32,6 +33,7 @@ class DetailOfMoviePresenter : DetailOfMoviePresenterProtocol{
     }
     
     func manageVideoSourcesError() {
+        view.hideSpinner()
         view.disableTrailerButton()
     }
     

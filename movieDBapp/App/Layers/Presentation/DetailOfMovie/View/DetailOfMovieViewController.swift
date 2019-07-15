@@ -71,7 +71,13 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
             self.updateImageByOrientation()
         }
         disableTrailerButton()
-        presenter?.getVideosForMovie(movieId: vm.id)
+        getVideosForMovie(id: vm.id)
+    }
+    
+    private func getVideosForMovie(id: String){
+        showSpinner()
+        presenter?.getVideosForMovie(movieId: id)
+
     }
     
     @IBAction func openTrailer(_ sender: Any) {
