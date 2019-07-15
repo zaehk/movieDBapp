@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PopularMoviesViewProtocol : BaseViewProtocol{
-    func showMovieList(productListVM: PopularMoviesViewModel)
+    func showMovieList(productListVM: PopularMoviesViewModel, detailViewModel: MoviesDetailsViewModel)
 }

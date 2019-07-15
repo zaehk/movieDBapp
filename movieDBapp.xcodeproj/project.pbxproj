@@ -13,6 +13,7 @@
 		E79EE08722DC88A800A668AF /* MovieListAndDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EE08622DC88A800A668AF /* MovieListAndDetailModel.swift */; };
 		E79EE08922DC93F600A668AF /* DetailOfMovieDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EE08822DC93F500A668AF /* DetailOfMovieDomainModel.swift */; };
 		E79EE08B22DC940200A668AF /* ListWithDetailDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EE08A22DC940200A668AF /* ListWithDetailDomainModel.swift */; };
+		E79EE08D22DCAB6D00A668AF /* MoviesDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EE08C22DCAB6D00A668AF /* MoviesDetailsViewModel.swift */; };
 		E7CB4AC222DB24B900512468 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4AC122DB24B900512468 /* ApiController.swift */; };
 		E7CB4AC422DB24E700512468 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4AC322DB24E700512468 /* ApiRouter.swift */; };
 		E7CB4AC722DB257A00512468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CB4AC622DB257A00512468 /* Constants.swift */; };
@@ -51,6 +52,7 @@
 		E79EE08622DC88A800A668AF /* MovieListAndDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListAndDetailModel.swift; sourceTree = "<group>"; };
 		E79EE08822DC93F500A668AF /* DetailOfMovieDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfMovieDomainModel.swift; sourceTree = "<group>"; };
 		E79EE08A22DC940200A668AF /* ListWithDetailDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithDetailDomainModel.swift; sourceTree = "<group>"; };
+		E79EE08C22DCAB6D00A668AF /* MoviesDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewModel.swift; sourceTree = "<group>"; };
 		E7CB4AC122DB24B900512468 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		E7CB4AC322DB24E700512468 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		E7CB4AC622DB257A00512468 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EB7B6622DB86870000E2AE /* PopularMoviesViewModel.swift */,
+				E79EE08C22DCAB6D00A668AF /* MoviesDetailsViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				E7CB4ACB22DB29E700512468 /* ApiParams.swift in Sources */,
 				E7CB4AC722DB257A00512468 /* Constants.swift in Sources */,
 				E7EB7B4522DB34F50000E2AE /* PopularMoviesPresenterProtocol.swift in Sources */,
+				E79EE08D22DCAB6D00A668AF /* MoviesDetailsViewModel.swift in Sources */,
 				E7EB7B6522DB59480000E2AE /* MovieImageHelper.swift in Sources */,
 				E7EB7B5B22DB3FC00000E2AE /* DetailOfMoviePresenter.swift in Sources */,
 				E7EB7B4722DB36850000E2AE /* PopularMoviesDomainController.swift in Sources */,

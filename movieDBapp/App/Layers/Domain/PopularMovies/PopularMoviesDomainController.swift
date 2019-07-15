@@ -21,34 +21,22 @@ class PopularMoviesDomainController{
         
         data.getPopularMoviesWithDetail(success: { (listWithDetail) in
             
-                        //SAVE IN REALM
-            var domainModel = PopularMoviesDomainModel()
-            for movieListInfo in listWithDetail{
-               domainModel.movies.append(MovieDomainModel.init(movieListInfoRM: movieListInfo.movieListInfo))
-            }
-            self.presenter.toViewModel(domainModel: domainModel)
+            //SAVE IN REALM
+            var movieListDomainModel = PopularMoviesDomainModel()
+            var moviesDetailsDomainModel = DetailsOfMoviesDomainModel()
             
+            for movieInfo in listWithDetail{
+               movieListDomainModel.movies.append(MovieDomainModel.init(movieListInfoRM: movieInfo.movieListInfo))
+               moviesDetailsDomainModel.detailOfMovies.append(DetailOfMovieDomainModel.init(detailRM: movieInfo.movieDetailInfo))
+            }
+            
+            self.presenter.toViewModel(listDomainModel: movieListDomainModel, detailsDomainModel: moviesDetailsDomainModel)
+
         }) { (movieError) in
             
             //CHECK FOR REALM LOCAL DATA
             
             //IF NOT, SHOW ERROR
         }
-        
-        
-        
-//        data.getPopularMovies(success: { (movieListResponseModel) in
-//
-//            let domainModel = PopularMoviesDomainModel.init(movieListResponseModel: movieListResponseModel)
-//
-//            //save in realm
-//
-//            self.presenter.toViewModel(domainModel: domainModel)
-//
-//
-//        }) { (dataError) in
-//            //if api call fails look for local content
-//        }
     }
-    
 }

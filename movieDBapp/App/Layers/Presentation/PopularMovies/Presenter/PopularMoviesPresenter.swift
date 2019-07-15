@@ -10,6 +10,9 @@ import Foundation
 
 class PopularMoviesPresenter : PopularMoviesPresenterProtocol{
 
+
+    
+
     private var view : PopularMoviesViewProtocol
     private var domain : PopularMoviesDomainController?
     
@@ -18,16 +21,23 @@ class PopularMoviesPresenter : PopularMoviesPresenterProtocol{
         self.domain = PopularMoviesDomainController.init(presenter: self)
     }
     
-    func toViewModel(domainModel: PopularMoviesDomainModel) {
-        var viewModel : PopularMoviesViewModel = []
-        for model in domainModel.movies{
-            viewModel.append(MovieViewModel.init(popularMoviesDomainModel: model))
+    func toViewModel(listDomainModel: PopularMoviesDomainModel, detailsDomainModel: DetailsOfMoviesDomainModel) {
+        var listViewModel : PopularMoviesViewModel = []
+        var detailsViewModel : MoviesDetailsViewModel = []
+        
+        
+        for model in listDomainModel.movies{
+            listViewModel.append(MovieViewModel.init(popularMoviesDomainModel: model))
         }
-        returnVMtoView(viewModel: viewModel)
+        for detail in detailsDomainModel.detailOfMovies{
+            detailsViewModel.append(MovieDetailViewModel.init(movieDetailVM: detail))
+        }
+        
+        returnVMtoView(listViewModel: listViewModel, detailViewModel: detailsViewModel)
     }
     
-    private func returnVMtoView(viewModel: PopularMoviesViewModel){
-        view.showMovieList(productListVM: viewModel)
+    private func returnVMtoView(listViewModel: PopularMoviesViewModel, detailViewModel: MoviesDetailsViewModel){
+        view.showMovieList(productListVM: listViewModel, detailViewModel: detailViewModel)
     }
     
     func getPopularMovieList(){

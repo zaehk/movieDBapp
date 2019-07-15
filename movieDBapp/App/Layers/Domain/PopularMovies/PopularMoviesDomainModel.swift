@@ -24,6 +24,12 @@ struct PopularMoviesDomainModel{
     init(){
         self.movies = []
     }
+    
+    init(movieListRM: [MovieListInfo]){
+        for movie in movieListRM{
+            self.movies.append(MovieDomainModel.init(movieListInfoRM: movie))
+        }
+    }
 }
 
 struct MovieDomainModel{

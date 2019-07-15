@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Welcome
 struct DetailOfMovieResponseModel: Codable {
-    let adult: Bool
+    let adult: Bool?
     let backdrop_path: String?
     let budget: Int?
     let genres: [Genre]?

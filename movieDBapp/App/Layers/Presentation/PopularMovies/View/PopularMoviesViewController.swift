@@ -22,6 +22,8 @@ class PopularMoviesViewController: BaseViewController {
         }
     }
     
+    private var detailsOfMoviesViewModel : MoviesDetailsViewModel = []
+    
     private var presenter : PopularMoviesPresenter?
     
     override func viewDidLoad() {
@@ -49,7 +51,7 @@ class PopularMoviesViewController: BaseViewController {
         if segue.identifier == Constants.Segues.detailOfMovieSegue {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let controller = segue.destination as! DetailOfMovieViewController
-                //pass detail view model
+                controller.detailOfMovieViewModel = self.detailsOfMoviesViewModel[indexPath.row]
             }
         }
     }
@@ -59,10 +61,13 @@ class PopularMoviesViewController: BaseViewController {
 //MARK: - ViewProtocol
 extension PopularMoviesViewController : PopularMoviesViewProtocol{
     
-    func showMovieList(productListVM: PopularMoviesViewModel) {
+    
+    func showMovieList(productListVM: PopularMoviesViewModel, detailViewModel: MoviesDetailsViewModel) {
         hideSpinner()
         self.popularMoviesViewModel = []
         self.popularMoviesViewModel = productListVM
+        self.detailsOfMoviesViewModel = []
+        self.detailsOfMoviesViewModel = detailViewModel
     }
     
 }
@@ -80,6 +85,7 @@ extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.dismissKeyboard()
         performSegue(withIdentifier: Constants.Segues.detailOfMovieSegue, sender: nil)
     }
 }

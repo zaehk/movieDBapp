@@ -40,6 +40,7 @@ class PopularMoviesCell: UITableViewCell {
         MovieImageHelper().downloadImageFromURL(url: movieInfo.posterURL, completion: { (image) in
             self.cellImage.image = image
         })
+        movieInfo.voteAverage == 0 ? (self.scoreLabel.isHidden = true) : (self.scoreLabel.isHidden = false)
     }
     
     
