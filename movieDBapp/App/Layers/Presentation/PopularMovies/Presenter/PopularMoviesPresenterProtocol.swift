@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PopularMoviesPresenterProtocol{
-    
+    func toViewModel(domainModel: PopularMoviesDomainModel)
 }

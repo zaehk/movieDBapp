@@ -25,7 +25,8 @@ class PopularMoviesDomainController{
             let domainModel = PopularMoviesDomainModel.init(movieListResponseModel: movieListResponseModel)
 
             //save in realm
-            //return to presenter
+            
+            self.presenter.toViewModel(domainModel: domainModel)
             
             
         }) { (dataError) in

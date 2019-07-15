@@ -16,4 +16,12 @@ struct MovieViewModel{
     let title: String
     let posterURL: String
     let releaseDate: String
+    
+    init(popularMoviesDomainModel: MovieDomainModel){
+        self.id = popularMoviesDomainModel.id
+        self.voteAverage = popularMoviesDomainModel.voteAverage
+        self.title = popularMoviesDomainModel.title
+        self.posterURL = popularMoviesDomainModel.posterURL
+        self.releaseDate = popularMoviesDomainModel.releaseDate
+    }
 }

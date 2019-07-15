@@ -48,7 +48,7 @@ class PopularMoviesViewController: BaseViewController {
 //MARK: - ViewProtocol
 extension PopularMoviesViewController : PopularMoviesViewProtocol{
     
-    func showProductList(productListVM: PopularMoviesViewModel) {
+    func showMovieList(productListVM: PopularMoviesViewModel) {
         self.popularMoviesViewModel = []
         self.popularMoviesViewModel = productListVM
     }
@@ -59,12 +59,13 @@ extension PopularMoviesViewController : PopularMoviesViewProtocol{
 //MARK: - TableView setup
 extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return popularMoviesViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PopularMoviesCell.nibName) as! PopularMoviesCell
+        cell.setup(movieInfo: popularMoviesViewModel[indexPath.row])
         
         return cell
     }
