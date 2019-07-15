@@ -8,16 +8,17 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
 
 class BaseViewController : UIViewController, BaseViewProtocol{
     
     
     func showSpinner() {
-        
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData.init(size: CGSize.init(width: 60.0, height: 60.0), message: "loading", messageFont: nil, messageSpacing: nil, type: NVActivityIndicatorType.lineScale, color: UIColor.white, padding: nil, displayTimeThreshold: nil, minimumDisplayTime: nil, backgroundColor: UIColor.lightGray, textColor: nil))
     }
     
     func hideSpinner() {
-        
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
     
     func showInfoError(error: MovieAppError) {
