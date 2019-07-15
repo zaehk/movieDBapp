@@ -10,9 +10,11 @@ import UIKit
 
 class PopularMoviesCell: UITableViewCell {
     
-    @IBOutlet weak var cellImage: UIView!
+
+    @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var imageGradientView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var gradientLayer : CAGradientLayer = CAGradientLayer()
     
@@ -30,8 +32,14 @@ class PopularMoviesCell: UITableViewCell {
         scoreLabel.layer.borderWidth = 2
         scoreLabel.layer.borderColor = UIColor.white.cgColor
         scoreLabel.layer.masksToBounds = true
-
-        
+    }
+    
+    func setup(movieInfo: MovieViewModel){
+        self.scoreLabel.text = String(movieInfo.voteAverage)
+        self.titleLabel.text = movieInfo.title
+        MovieImageHelper().downloadImageFromURL(url: movieInfo.posterURL, completion: { (image) in
+            self.cellImage.image = image
+        })
     }
     
     

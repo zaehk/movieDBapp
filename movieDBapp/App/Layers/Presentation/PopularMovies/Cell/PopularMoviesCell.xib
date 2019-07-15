@@ -68,9 +68,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cellImage" destination="jec-N6-3Su" id="VBb-QY-pRn"/>
+                <outlet property="cellImage" destination="jec-N6-3Su" id="bkV-Jc-vgP"/>
                 <outlet property="imageGradientView" destination="4V7-3S-Uid" id="PdY-Nn-f3x"/>
                 <outlet property="scoreLabel" destination="hsi-un-yxi" id="ZrI-5G-Wct"/>
+                <outlet property="titleLabel" destination="PIe-Rw-gc3" id="eZa-kQ-x7z"/>
             </connections>
             <point key="canvasLocation" x="16.800000000000001" y="214.99250374812596"/>
         </tableViewCell>

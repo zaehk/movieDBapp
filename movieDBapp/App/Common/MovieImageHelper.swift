@@ -28,8 +28,8 @@ class MovieImageHelper{
     
     
     
-    static func getImageURL(imageEndpoint: String, imageType: MovieImageType)-> URL?{
-        return URL(string: imageType.baseURL+imageEndpoint)
+    static func getImageURL(imageEndpoint: String, imageType: MovieImageType)-> String{
+        return imageType.baseURL+imageEndpoint
     }
     
     let cellIconCache = NSCache<NSString, UIImage>()

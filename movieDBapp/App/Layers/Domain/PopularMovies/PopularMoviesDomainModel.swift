@@ -26,7 +26,7 @@ struct MovieDomainModel{
     let id: Int
     let voteAverage: Double
     let title: String
-    let posterURL: URL?
+    let posterURL: String
     let releaseDate: String
     
     init(movieListInfoRM: MovieListInfo){

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PopularMoviesViewController: BaseViewController, PopularMoviesViewProtocol {
+class PopularMoviesViewController: BaseViewController {
 
     //MARK: - Views
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     
@@ -38,15 +39,27 @@ class PopularMoviesViewController: BaseViewController, PopularMoviesViewProtocol
         self.tableView.rowHeight = 100
     }
     
+    private func getMovieList(){
+        showSpinner()
+    }
+    
+}
+
+//MARK: - ViewProtocol
+extension PopularMoviesViewController : PopularMoviesViewProtocol{
+    
+    func showProductList(productListVM: PopularMoviesViewModel) {
+        self.popularMoviesViewModel = []
+        self.popularMoviesViewModel = productListVM
+    }
     
     
 }
 
 //MARK: - TableView setup
 extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelegate{
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,5 +68,9 @@ extension PopularMoviesViewController : UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+}
+
+//MARK: - SearchBar
+extension PopularMoviesViewController : UISearchBarDelegate{
     
 }
