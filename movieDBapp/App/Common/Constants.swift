@@ -20,7 +20,7 @@ struct Constants{
     
     struct BaseURL{
         static let moviesBaseUrl = "https://api.themoviedb.org/3/movie/"
-        static let listIconBaseUrl = "https://image.tmdb.org/t/p/w300/"
+        static let listIconBaseUrl = "https://image.tmdb.org/t/p/w500/"
         static let movieDetailImageBaseUrl = "https://image.tmdb.org/t/p/w500/"
     }
     

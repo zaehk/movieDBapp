@@ -15,11 +15,12 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var overviewTextView: UITextView!
     @IBOutlet weak var trailerButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
 
     var detailOfMovieViewModel : MovieDetailViewModel? = nil
-    var verticalImage : UIImage? = nil
-    var horizontalImage : UIImage? = nil
+    var landscapeModeImage : UIImage? = nil
+    var verticalModeImage : UIImage? = nil
 
     private var presenter : DetailOfMoviePresenter?
     private var gradientLayer : CAGradientLayer = CAGradientLayer()
@@ -46,12 +47,15 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
         self.dateLabel.text = vm.releaseDate
         self.overviewTextView.text = vm.overview
         self.genresLabel.text = vm.genres.joined(separator: ", ")+"."
+        self.titleLabel.text = vm.title
         
         MovieImageHelper().downloadImageFromURL(url: vm.backDropPathURL) { (image) in
-            self.horizontalImage = image
+            self.verticalModeImage = image
+            self.updateImageByOrientation()
         }
         MovieImageHelper().downloadImageFromURL(url: vm.posterURL) { (poster) in
-            self.verticalImage = poster
+            self.landscapeModeImage = poster
+            self.updateImageByOrientation()
         }
         
         
@@ -60,18 +64,27 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateGradientSize()
+        updateImageByOrientation()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         updateGradientSize()
-        
-        if UIDevice.current.orientation.isLandscape {
-            print("Landscape")
-            if UIDevice.current.orientation.isFlat {
-                print("Flat")
-            } else {
-                print("Portrait")
-            }
+        updateImageByOrientation()
+    }
+    
+    private func updateImageByOrientation(){
+        UIDevice.current.orientation.isLandscape ? setLandscapeImage() : setVerticalImage()
+    }
+    
+    private func setLandscapeImage(){
+        if let poster = self.landscapeModeImage{
+            self.posterImageView.image = poster
+        }
+    }
+    
+    private func setVerticalImage(){
+        if let landscapeImage = self.verticalModeImage{
+            self.posterImageView.image = landscapeImage
         }
     }
     
