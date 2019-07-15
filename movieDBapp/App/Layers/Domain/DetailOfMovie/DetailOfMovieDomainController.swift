@@ -19,7 +19,8 @@ class DetailOfMovieDomainController{
     
     func getTrailersForMovie(movieId: String, success: @escaping()->Void, failed: @escaping()->Void){
         
-        data.getVideoSources(movieId: "550", success: { (videoSourcesRM) in
+        data.getVideoSources(movieId: movieId, success: { (videoSourcesRM) in
+            let domainModel = VideoSourcesDomainModel.init(videoSourcesRM: videoSourcesRM)
             
         }) { (movieError) in
             //upload error

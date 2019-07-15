@@ -17,4 +17,6 @@ class DetailOfMoviePresenter : DetailOfMoviePresenterProtocol{
         self.view = view
         self.domain = DetailOfMovieDomainController.init(presenter: self)
     }
+    
+    
 }
