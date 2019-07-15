@@ -16,6 +16,7 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
     @IBOutlet weak var overviewTextView: UITextView!
     @IBOutlet weak var trailerButton: UIButton!
     
+
     private var presenter : DetailOfMoviePresenter?
     private var gradientLayer : CAGradientLayer = CAGradientLayer()
     
@@ -36,8 +37,18 @@ class DetailOfMovieViewController: BaseViewController, DetailOfMovieViewProtocol
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        gradientLayer.frame = posterImageView.frame
+        updateGradientSize()
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        updateGradientSize()
+    }
+    
+    private func updateGradientSize(){
+        gradientLayer.frame = posterImageView.bounds
+    }
+    
+    
 
 
     private func changePosterDesign(orientation: UIDeviceOrientation){

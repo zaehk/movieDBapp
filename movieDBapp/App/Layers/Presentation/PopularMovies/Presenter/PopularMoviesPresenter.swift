@@ -31,7 +31,7 @@ class PopularMoviesPresenter : PopularMoviesPresenterProtocol{
     }
     
     func getPopularMovieList(){
-        domain?.getPopularMovies()
+        domain?.getPopularMoviesWithDetail()
     }
 
 }

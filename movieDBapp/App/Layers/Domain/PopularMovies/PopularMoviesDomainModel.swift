@@ -20,6 +20,10 @@ struct PopularMoviesDomainModel{
             self.movies = []
         }
     }
+    
+    init(){
+        self.movies = []
+    }
 }
 
 struct MovieDomainModel{
