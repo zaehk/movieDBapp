@@ -41,9 +41,9 @@ struct MovieDomainModel{
     
     init(movieListInfoRM: MovieListInfo){
         self.id = movieListInfoRM.id
-        self.voteAverage = movieListInfoRM.vote_average
+        self.voteAverage = movieListInfoRM.vote_average ?? 0
         self.title = movieListInfoRM.title
-        self.posterURL = MovieImageHelper.getImageURL(imageEndpoint: movieListInfoRM.poster_path, imageType: .listIcon)
-        self.releaseDate = movieListInfoRM.release_date
+        self.posterURL = MovieImageHelper.getImageURL(imageEndpoint: movieListInfoRM.poster_path ?? "asd", imageType: .listIcon)
+        self.releaseDate = movieListInfoRM.release_date ?? ""
     }
 }
